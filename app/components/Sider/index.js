@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, Icon } from 'antd';
+import { Layout, Menu, Icon } from 'antd';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
@@ -9,6 +9,7 @@ class Sider extends React.Component {
   }
   render() {
     return (
+    <Layout>
       <Menu
         onClick={this.handleClick}
         style={{ width: 240 }}
@@ -41,6 +42,7 @@ class Sider extends React.Component {
           <Menu.Item key="12">Option 12</Menu.Item>
         </SubMenu>
       </Menu>
+    </Layout>
     );
   }
 }

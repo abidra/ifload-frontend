@@ -11,13 +11,11 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
-import Sider from 'components/Sider';
-import Header from 'components/Header';
-import Content from 'components/Content';
 import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';
 import { makeSelectRepos, makeSelectLoading, makeSelectError } from 'containers/App/selectors';
-import { Layout } from 'antd';
+import Body from 'components/Body';
+import NavBar from 'components/NavBar'
 import { loadRepos } from '../App/actions';
 import { changeUsername } from './actions';
 import { makeSelectUsername } from './selectors';
@@ -47,14 +45,8 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
         <Helmet>
           <meta name="description" content="Temukan, Bagikan, Upload dan Download File secara Gratis dengan kecepatan Unggah dan Unduh Tanpa Batas dengan Kemudahan dan Kenyamanan tanpa iklan menganggu" />
         </Helmet>
-        <Layout>
-        <Sider />
-        <Layout>
-        <Header />
-        <Content />
-        </Layout>
-        </Layout>
-      </article>
+            <NavBar />
+    </article>
     );
   }
 }
